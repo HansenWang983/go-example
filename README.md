@@ -264,17 +264,17 @@ pkg/
 src/
     github.com/
     	Go-zh/
-		golang/
+    	golang/
 			example/
 			tools/
 		hansenbeast/
 			go-example/
 				.git/			#本地版本仓库
-        		hello-go/
-                    hello.go      # command source
-        		stringutil/
-            		reverse.go    # package source
-            		reverse_test.go
+				hello-go/
+					hello.go      # command source
+				stringutil/
+					reverse.go    # package source
+					reverse_test.go
 	golang.org/
 		x/
 			tools/
