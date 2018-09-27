@@ -116,7 +116,7 @@ func main() {
 go install github.com/hansenbeast/go-example/hello-go
 ```
 
-之后发现bin目录下多了一个hello-go的可执行文件，如果之前你`export PATH=$PATH:$GOAPTH/bin`了，可以使用`hello-go`运行程序。
+之后发现bin目录下多了一个hello-go的可执行文件，如果之前你`export PATH=$PATH:$GOAPTH/bin`了，可以使用`hello-go`直接运行程序（会从bin目录下找到相应的可执行文件）。
 
 
 
@@ -209,7 +209,7 @@ go test github.com/hansenbeast/go-example/stringutil
 
 
 
-`go get github.com/golang/example`会从远程的github.com/golang/example仓库拉取文件并build和install。
+测试命令`go get github.com/golang/example`会从远程的github.com/golang/example仓库拉取文件并build和install，发现bin目录下多了hello-go的可执行文件。
 
 ```bash
 go get github.com/golang/example/hello
@@ -217,3 +217,63 @@ hello
 ```
 
 ![7](Assets/7.png)
+
+
+
+在本地go-example项目中建立git仓库，并在github上建立go-example远程仓库，然后通过`git remote add origin "url"`绑定。
+
+```bash
+#进入go-example
+git init
+git add .
+git commit -m "go-helloworld"
+```
+
+![8](Assets/8.png)
+
+同样在vscode中出现版本控制
+
+![9](Assets/9.png)
+
+由于第一次连接到github，需要验证用户名和密码
+
+```bash
+git push -u origin master
+```
+
+![10](Assets/10.png)
+
+
+
+完成实验时的文件目录结构。
+
+```bash
+bin/
+	gotour
+	hello-go
+    hello                 # command executable
+pkg/
+	linux_amd64/
+		github.com/
+			Go-zh/
+			golang/
+			hansenbeast/
+		golang.org/
+src/
+    github.com/
+    	Go-zh/
+		golang/
+			example/
+			tools/
+		hansenbeast/
+			go-example/
+        		hello-go/
+                    hello.go      # command source
+        		stringutil/
+            		reverse.go    # package source
+            		reverse_test.go
+	golang.org/
+		x/
+			tools/
+```
+
