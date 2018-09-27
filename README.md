@@ -253,7 +253,7 @@ git push -u origin master
 bin/
 	gotour
 	hello-go
-    hello                 # command executable
+	hello                 # command executable
 pkg/
 	linux_amd64/
 		github.com/
@@ -262,9 +262,9 @@ pkg/
 			hansenbeast/
 		golang.org/
 src/
-    github.com/
-    	Go-zh/
-    	golang/
+	github.com/
+		Go-zh/
+		golang/
 			example/
 			tools/
 		hansenbeast/
