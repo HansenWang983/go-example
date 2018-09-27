@@ -94,6 +94,8 @@ git config --list #检查已有的配置信息
 
 在工作空间中建立第一个go语言项目仓库，命名为go-example，并建立hello-go的源码目录。
 
+**如果对文件目录结构有疑问，请跳转到文档底部。**
+
 ```bash
 mkdir $GOPATH/src/github.com/hansenbeast/go-example/hello-go -p
 ```
