@@ -267,6 +267,7 @@ src/
 			tools/
 		hansenbeast/
 			go-example/
+				.git/			#本地版本仓库
         		hello-go/
                     hello.go      # command source
         		stringutil/
